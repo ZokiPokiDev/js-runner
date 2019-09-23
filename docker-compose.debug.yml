@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  js_runner:
+    image: js_runner
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+      - 9229:9229
+    ## set your startup file here
+    command: node index.js
